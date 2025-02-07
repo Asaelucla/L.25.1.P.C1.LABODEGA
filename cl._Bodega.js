@@ -1,19 +1,12 @@
-export default class cl_Bodega {
-  constructor() {
-    this.acGanancia = 0;
-    this.articulos = [];
+export default class Cl_bodega {
+    constructor() {
+      this.acGanancia = 0;
+    }
+    procesararticulo(a) {
+      this.acGanancia+=this.totaldeGanancia();
+    }
+    totaldeGanancia() {
+      return this.acGanancia;
+    }
+
   }
-  agregarArticulos(articulos) {
-    let totaldeGanancia = 0;
-    this.articulos.forEach((articulos) => {
-      totaldeGanancia += articulos.calcularGanancia();
-    });
-    return totaldeGanancia;
-  }
-  procesararticulos(a) {
-    this.acGanancia = this.acGanancia + this.acGanancia();
-  }
-  totaldeGanancia() {
-    return this.acGanancia;
-  }
-}
